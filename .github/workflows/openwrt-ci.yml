@@ -103,9 +103,9 @@ jobs:
 
           # 编译x64固件:
           cat >> .config <<EOF
-          CONFIG_TARGET_x86=y
-          CONFIG_TARGET_x86_64=y
-          CONFIG_TARGET_x86_64_Generic=y
+          CONFIG_TARGET_ar71xx=y
+          CONFIG_TARGET_ar71xx_DEVICE_tp-wr886n=y
+          CONFIG_TARGET_BOARD="ar71xx"
           EOF
 
           # 固件压缩:
@@ -114,9 +114,9 @@ jobs:
           EOF
 
           # 编译UEFI固件:
-          cat >> .config <<EOF
-          CONFIG_EFI_IMAGES=y
-          EOF
+          #cat >> .config <<EOF
+          #CONFIG_EFI_IMAGES=y
+          #EOF
 
           # IPv6支持:
           cat >> .config <<EOF
@@ -135,13 +135,13 @@ jobs:
           EOF
 
           # USB3.0支持:
-          cat >> .config <<EOF
-          CONFIG_PACKAGE_kmod-usb-ohci=y
-          CONFIG_PACKAGE_kmod-usb-ohci-pci=y
-          CONFIG_PACKAGE_kmod-usb2=y
-          CONFIG_PACKAGE_kmod-usb2-pci=y
-          CONFIG_PACKAGE_kmod-usb3=y
-          EOF
+          #cat >> .config <<EOF
+          #CONFIG_PACKAGE_kmod-usb-ohci=y
+          #CONFIG_PACKAGE_kmod-usb-ohci-pci=y
+          #CONFIG_PACKAGE_kmod-usb2=y
+          #CONFIG_PACKAGE_kmod-usb2-pci=y
+          #CONFIG_PACKAGE_kmod-usb3=y
+          #EOF
 
           # 常用LuCI插件选择:
           cat >> .config <<EOF
